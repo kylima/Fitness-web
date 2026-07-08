@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Fit | Authentication</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="auth-page">
+    <div class="auth-wrapper">
+        <div class="split-toggle">
+            <button id="toggle-client" class="active" onclick="switchRole('client')">Client Access</button>
+            <button id="toggle-employee" onclick="switchRole('employee')">Employee Access</button>
+        </div>
+
+        <div class="auth-card">
+            <!-- Form Header Dynamic label -->
+            <h2 id="form-title">Client Sign Up</h2>
+            
+            <!-- Tab switches between login and registration -->
+            <div class="sub-tabs">
+                <span id="tab-signup" class="active-tab" onclick="toggleFormType('signup')">Register</span>
+                <span id="tab-login" onclick="toggleFormType('login')">Login</span>
+            </div>
+
+            <form id="auth-form" onsubmit="handleAuthSubmit(event)">
+                <!-- Hidden fields to retain dynamic context state -->
+                <input type="hidden" id="form-role" value="client">
+                <input type="hidden" id="form-action" value="signup">
+
+                <div class="form-group" id="group-name">
+                    <label>Full Name</label>
+                    <input type="text" id="auth-name" placeholder="Antony Kariuki">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="auth-email" required placeholder="antony@gmail.com">
+                </div>
+                <div class="form-group" id="group-phone">
+                    <label>M-Pesa Phone Number</label>
+                    <input type="tel" id="auth-phone" placeholder="254719292481">
+                </div>
+                <div class="form-group">
+                    <label>Secure Password</label>
+                    <input type="password" id="auth-password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn-block" id="btn-submit">Complete Registration</button>
+            </form>
+            <div id="message-box" class="alert hidden"></div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

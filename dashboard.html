@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Fit | Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Apex<span>Fit</span> Dashboard</div>
+        <nav><a href="/logout" class="btn-nav">Logout</a></nav>
+    </header>
+
+    <main class="dashboard-container">
+        <!-- Dashboard Greeting -->
+        <section class="welcome-banner">
+            <h2>Welcome Back, <span id="user-display-name">User</span>!</h2>
+            <p>Account Type: <strong id="user-display-role" style="text-transform: uppercase;"></strong></p>
+        </section>
+
+        <!-- CLIENT PORTAL VIEW -->
+        <section id="client-view" class="dashboard-section hidden">
+            <div class="payment-card">
+                <h3>Membership Active Status</h3>
+                <p>Unlock access to the facility instantly by completing your monthly subscription checkout panel below.</p>
+                <div class="price-tag">Ksh 3,000<span>/mo</span></div>
+                <button onclick="triggerPayment()" class="btn-primary">Pay via M-PESA STK Push</button>
+                <div id="pay-message" class="alert hidden"></div>
+            </div>
+        </section>
+
+        <!-- ADMIN/EMPLOYEE PORTAL VIEW -->
+        <section id="employee-view" class="dashboard-section hidden">
+            <h3>Management Overview Matrix</h3>
+            <div class="metrics-grid">
+                <div class="metric-box box-blue">
+                    <h4>Registered System Members</h4>
+                    <p id="stat-users">0</p>
+                </div>
+                <div class="metric-box box-green">
+                    <h4>Total Gross Earnings</h4>
+                    <p id="stat-revenue">Ksh 0.00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
