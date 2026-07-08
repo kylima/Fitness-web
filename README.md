@@ -22,6 +22,7 @@ STK Push Notifications:
 Direct-to-phone STK prompts for seamless, automated user checkouts.
 
 **Tech Stack**
+
 Frontend:
 
 HTML5 / CSS – Responsive user interface as well as styling.
