@@ -61,7 +61,7 @@ git clone https://github.com/your-username/Fitness-web.git
 
 cd Fitness-web
 
-3. Install Dependencies
+2. Install Dependencies
    
 Install the necessary backend Node.js packages:
 
