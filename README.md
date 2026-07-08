@@ -1,5 +1,6 @@
 # Fitness-web
 **Apex Fit – A Web-Based Enrollment & Payment System**
+
 Apex Fit is a full-stack gym management web application designed to streamline user registration, membership enrollment, and secure mobile payments. It features an intuitive frontend for members and a robust administrative dashboard for backend management.
 
 Features:
